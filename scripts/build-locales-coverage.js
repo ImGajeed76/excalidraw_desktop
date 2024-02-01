@@ -13,7 +13,7 @@ const flatten = (object = {}, result = {}, extraKey = "") => {
 };
 
 const locales = files.filter(
-  (file) => file !== "README.md" && file !== "percentages.json",
+  (file) => file !== "EXCALIDRAW_README.md" && file !== "percentages.json",
 );
 
 const percentages = {};
