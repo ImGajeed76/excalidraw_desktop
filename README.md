@@ -45,6 +45,8 @@ widely accessible application. For those interested in contributing, please refe
 A heartfelt thank you to the Excalidraw team and the community for inspiring this desktop version. This project stands
 as a tribute to the original Excalidraw, aiming to extend its reach and accessibility.
 
+Desktop port by [Oliver Seifert](https://oseifert.ch)
+
 ## License
 
 This project is open-source and available under the same license as the original Excalidraw project to ensure
