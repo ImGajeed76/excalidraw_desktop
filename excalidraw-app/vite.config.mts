@@ -15,9 +15,17 @@ export default defineConfig(({ mode }) => {
   return {
     server: {
       port: Number(envVars.VITE_APP_PORT || 3000),
-      // open the browser
-      open: true,
+      // Tauri expects a fixed port, fail if that port is not available
+      strictPort: true,
+      // don't open the browser when running via Tauri
+      open: false,
+      watch: {
+        // tell vite to ignore watching `src-tauri`
+        ignored: ["**/src-tauri/**"],
+      },
     },
+    // Expose TAURI_ENV_* variables to the frontend
+    envPrefix: ["VITE_", "TAURI_ENV_*"],
     // We need to specify the envDir since now there are no
     //more located in parallel with the vite.config.ts file but in parent dir
     envDir: "../",
